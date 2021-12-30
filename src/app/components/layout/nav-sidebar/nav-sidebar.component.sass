@@ -1,0 +1,78 @@
+@mixin hideScrollbar
+  // https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/
+  // There is a CSS rule that can hide scrollbars in Webkit-based browsers (Chrome and Safari).
+    &::-webkit-scrollbar
+        width: 0 !important
+        background: transparent
+  // There is a CSS rule that can hide scrollbars in IE 10+.
+        -ms-overflow-style: none
+
+  // Use -ms-autohiding-scrollbar if you wish to display on hover.
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  // There used to be a CSS rule that could hide scrollbars in Firefox, but it has since been deprecated.
+        scrollbar-width: none
+
+.sidebar-container
+    height: 90vh
+    width: 15vw
+    background-color: #ffffff
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    justify-content: flex-start
+    position: fixed
+    overflow: none
+
+.sidebar-top-items
+    height: 75vh
+    overflow-y: scroll
+    &::-webkit-scrollbar
+        width: 0px
+        background: transparent
+
+.sidebar-bottom-items
+    overflow: none
+
+.nav-item .bottom-align
+    height: 10vh
+    width: 100%
+    justify-content: flex-end
+
+.nav-item
+    width: 100% !important
+    user-select: none
+
+.nav-item .active
+    background-color: #1BACEB
+
+.nav-link
+    color: white
+    cursor: pointer
+
+.sidebar-submenu
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    justify-content: flex-start
+    text-justify: newspaper
+    // background: linear-gradient(90deg,#246ED6 0%, #1BACEB -29.09%,#1AD3D6 51.77%,#27F5BA 129.35%)
+    background-color: #1BACEB
+    transition: all ease-in 0.2s
+    -moz-box-shadow: inset 0 0 5px #000000
+    -webkit-box-shadow: inset 0 0 5px #000000
+    box-shadow: inset 0 0 5px #000000
+
+.sidebar-submenu-link
+    padding: 10px 10px 10px 10px
+    cursor: pointer
+    color: white
+    font-size: 14px
+    font-weight: 600
+    transition: transform ease-in 0.2s
+
+.sidebar-submenu-link:hover
+    color: black
+    // background-color: white
+    transform: scale(1.05)

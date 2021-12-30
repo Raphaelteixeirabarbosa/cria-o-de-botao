@@ -1,0 +1,30 @@
+<div class="sidebar-container d-flex flex-column flex-shrink-0 p-3 text-white bg-dark nav">
+    <div class="sidebar-top-items">
+        <div class="sidebar-row nav-item">
+            <a class="nav-link" (click)="expand_menu(0)" [ngClass]="{'active': exmenu == 0}"><i class="fas fa-tachometer-alt" ></i> Dashboard</a>
+            <ul *ngIf="exmenu == 0" class="sidebar-submenu list-unstyled fw-normal pb-1 small">
+                <li class="sidebar-submenu-link">Relatório de uso de chat</li>
+                <li class="sidebar-submenu-link">Relatório de uso de Utilizacão</li>
+            </ul>
+        </div>
+        <div class="sidebar-row nav-item">
+            <a class="nav-link" (click)="expand_menu(1)" [ngClass]="{'active': exmenu == 1}"><i class="fas fa-user"></i> Usuario</a>
+            <ul *ngIf="exmenu == 1" class="sidebar-submenu list-unstyled fw-normal pb-1 small">
+                <li class="sidebar-submenu-link">Meus Dados</li>
+                <li class="sidebar-submenu-link">Configurações</li>
+            </ul>
+        </div>
+        <div class="sidebar-row nav-item">
+            <a class="nav-link" (click)="expand_menu(2)" [ngClass]="{'active': exmenu == 2}"><i class="fas fa-cog"></i> Configurações</a>
+            <ul *ngIf="exmenu == 2" class="sidebar-submenu list-unstyled fw-normal pb-1 small">
+                <li class="sidebar-submenu-link">Definiçoes</li>
+                <li class="sidebar-submenu-link">Avançados</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar-bottom-items">
+        <div class="sidebar-row nav-item bottom-align">
+            <a class="nav-link" ><i class="fas fa-users"></i> Chat</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+.bg-container
+    background: linear-gradient(200.96deg,#246ED6 0%, #1BACEB -29.09%,#1AD3D6 51.77%,#27F5BA 129.35%)
+    position: absolute
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.bg-left-side
+    display: flex
+    width: 30vw
+    height: 100vh
+    align-items: center
+    justify-content: center
+    // background-color: #3751FA
+    background: linear-gradient(90deg,rgba(55,81,250,1) 0%,rgba(0, 0, 0, 0) 100%)
+
+.bg-right-side
+    display: flex
+    width: 70vw
+    height: 100vh
+    align-items: center
+    justify-content: center
+
+.bg-right-side h1
+    font-size: 120px
+    color: #eeeeee
+    fill: white
+    user-select: none
+    svg
+        transition: transform ease-in 0.5s
+        transform: scale(1.03)
+
+.bg-right-side h1:hover
+    svg
+        transform: scale(1)
+
+.bg-right-side svg
+    margin-bottom: 1em
